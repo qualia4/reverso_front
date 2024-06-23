@@ -1,0 +1,213 @@
+/* GamePage.css */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.game-title {
+    color: #333;
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.game-stats {
+    text-align: center;
+}
+
+
+.game-board {
+
+}
+
+.chat-section .chat-controls {
+    display: flex;
+    align-items: center;
+}
+
+.chat-section .chat-input {
+    flex-grow: 1;
+    margin-right: 8px;  /* Adds some space between the input and the button */
+}
+
+.chat-button {
+    flex-shrink: 0; /* Prevents the button from shrinking */
+    width: 20%;
+    padding: 10px; /* Increased padding for better aesthetics */
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.game-cell {
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 50%; /* Makes the cell circular */
+    background-color: lightgray;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.game-cell:hover {
+    transform: scale(1.1); /* Slight increase in size on hover for interactivity */
+}
+
+.game-cell-playable {
+    border-color: grey;
+}
+
+.first-player-border {
+    border-color: #3498db;
+}
+
+.second-player-border {
+    border-color: #e74c3c;
+}
+
+.game-cell-first-player {
+    background-color: #3498db; /* Blue for the first player */
+    color: white; /* Ensures text (if any) is visible */
+}
+
+.game-cell-second-player {
+    background-color: #e74c3c; /* Red for the second player */
+    color: white; /* Ensures text (if any) is visible */
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-section {
+    margin-top: 10px;
+    width: 400px;
+}
+
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+}
+
+.error {
+    color: #cc0000;
+}
+
+.chat-input,
+.game-button {
+    width: 100%;
+    padding: 12px; /* Increased padding for better aesthetics */
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-button{
+    color: white;
+    background-color: #5c67f2;
+    border: none;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.chat-input {
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Rounded corners for input fields */
+    max-width: 300px;
+}
+
+.chat-button:hover, .game-button:hover {
+    background-color: #4a54e1;
+}
+
+.chat-button{
+    color: white;
+    background-color: #5c67f2;
+    border: none;
+    border-radius: 15px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px; /* Increased margin for spacing between buttons */
+    max-width: 150px;
+    height: 100%;
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-box {
+    width: 40px;  /* Fixed width for each score box */
+    height: 30px; /* Fixed height to ensure boxes are of equal size */
+    line-height: 30px; /* Centers text vertically */
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 0 5px; /* Adds space between the score boxes */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transform: scale(1); /* Apply initial scale */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    text-align: center;
+}
+
+.modal-background:hover {
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1); /* Apply initial scale */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.modal-content:hover {
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+.modal-header {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
