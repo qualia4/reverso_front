@@ -1,4 +1,4 @@
-enum Addresses{
-   REVERSO = "http://localhost:5260",
+enum Addresses {
+  REVERSO = "http://localhost:5260",
 }
-export {Addresses};
+export { Addresses };
