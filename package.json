@@ -23,7 +23,7 @@
     "build": "webpack --mode production",
     "lint": "eslint ./src/*",
     "prettier": "prettier --write --ignore-unknown ./src/*",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
