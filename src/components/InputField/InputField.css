@@ -1,0 +1,10 @@
+/* src/components/InputField/InputField.css */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    max-width: 300px;
+}
