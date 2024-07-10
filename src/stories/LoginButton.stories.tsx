@@ -1,4 +1,3 @@
-// src/components/Button/Button.stories.tsx
 import { Meta, StoryObj } from '@storybook/react';
 import { LoginButton } from "../components/LoginButton/LoginButton";
 

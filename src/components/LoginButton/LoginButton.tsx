@@ -1,4 +1,3 @@
-// src/components/LoginButton/LoginButton.tsx
 import React from 'react';
 import './LoginButton.css';
 

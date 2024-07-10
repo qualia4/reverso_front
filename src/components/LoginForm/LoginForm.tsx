@@ -1,4 +1,3 @@
-// src/components/LoginForm/LoginForm.tsx
 import React, { useState } from 'react';
 import { InputField } from '../InputField/InputField';
 import { LoginButton } from '../LoginButton/LoginButton';

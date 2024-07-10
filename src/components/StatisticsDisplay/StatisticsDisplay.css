@@ -1,0 +1,9 @@
+.statistics-display {
+    text-align: left;
+}
+
+.statistics-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}

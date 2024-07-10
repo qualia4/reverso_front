@@ -1,4 +1,3 @@
-// src/components/ErrorMessage/ErrorMessage.stories.tsx
 import { Meta, StoryObj } from '@storybook/react';
 import { ErrorMessage} from "../components/ErrorMessage/ErrorMessage";
 

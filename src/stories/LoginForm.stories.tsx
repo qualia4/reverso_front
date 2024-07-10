@@ -1,4 +1,3 @@
-// src/components/LoginForm/LoginForm.stories.tsx
 import { Meta, StoryObj } from '@storybook/react';
 import { LoginForm} from "../components/LoginForm/LoginForm";
 

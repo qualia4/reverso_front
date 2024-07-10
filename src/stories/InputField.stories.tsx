@@ -1,4 +1,3 @@
-// src/components/InputField/InputField.stories.tsx
 import { Meta, StoryObj } from '@storybook/react';
 import { InputField} from "../components/InputField/InputField";
 

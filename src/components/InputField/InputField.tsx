@@ -1,4 +1,3 @@
-// src/components/InputField/InputField.tsx
 import React from 'react';
 import './InputField.css';
 
