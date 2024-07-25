@@ -14,11 +14,25 @@ interface StatisticsDisplayProps {
 }
 
 export const StatisticsDisplay: React.FC<StatisticsDisplayProps> = ({ username, stats }) => (
-    <div className="statistics-display">
+    <>
         <h2 className="statistics-title">Statistics for {username}</h2>
-        <p>Games Played: {stats.gamesPlayed}</p>
-        <p>Games Won: {stats.gamesWon}</p>
-        <p>Games Lost: {stats.gamesLost}</p>
-        <p>Draws: {stats.draws}</p>
-    </div>
+        <div className="statistics-grid">
+            <div className="statistic-item">
+                <span className="statistic-label">Games Played:</span>
+                <span className="statistic-value">{stats.gamesPlayed}</span>
+            </div>
+            <div className="statistic-item">
+                <span className="statistic-label">Games Won:</span>
+                <span className="statistic-value">{stats.gamesWon}</span>
+            </div>
+            <div className="statistic-item">
+                <span className="statistic-label">Games Lost:</span>
+                <span className="statistic-value">{stats.gamesLost}</span>
+            </div>
+            <div className="statistic-item">
+                <span className="statistic-label">Draws:</span>
+                <span className="statistic-value">{stats.draws}</span>
+            </div>
+        </div>
+    </>
 );
