@@ -1,18 +1,18 @@
 import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { useMyContext } from "../../MyContext";
-import GamePage from "./GamePage";
-import { getGameInfo } from "../../api/getGameInfo";
-import { makeMoveService } from "../../api/makeMoveService";
-import { getChatService } from "../../api/getChatService";
-import { writeMessageService } from "../../api/writeMessageService";
+import { useMyContext } from "../MyContext";
+import GamePage from "../pages/GamePage/GamePage";
+import { getGameInfo } from "../api/getGameInfo";
+import { makeMoveService } from "../api/makeMoveService";
+import { getChatService } from "../api/getChatService";
+import { writeMessageService } from "../api/writeMessageService";
 
-jest.mock("../../MyContext");
-jest.mock("../../api/getGameInfo");
-jest.mock("../../api/makeMoveService");
-jest.mock("../../api/getChatService");
-jest.mock("../../api/writeMessageService");
+jest.mock("../MyContext");
+jest.mock("../api/getGameInfo");
+jest.mock("../api/makeMoveService");
+jest.mock("../api/getChatService");
+jest.mock("../api/writeMessageService");
 
 const mockNavigate = jest.fn();
 jest.mock("react-router-dom", () => ({

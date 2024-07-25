@@ -1,19 +1,19 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter, useNavigate } from 'react-router-dom';
-import LoginPage from './LoginPage';
-import { useMyContext } from '../../MyContext';
-import { loginService } from '../../api/loginService';
-import { registerService } from '../../api/registerService';
+import LoginPage from '../pages/LoginPage/LoginPage';
+import { useMyContext } from '../MyContext';
+import { loginService } from '../api/loginService';
+import { registerService } from '../api/registerService';
 
 // Mock the required modules and hooks
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: jest.fn(),
 }));
-jest.mock('../../MyContext');
-jest.mock('../../api/loginService');
-jest.mock('../../api/registerService');
+jest.mock('../MyContext');
+jest.mock('../api/loginService');
+jest.mock('../api/registerService');
 
 describe('LoginPage', () => {
     const mockUpdateJsonData = jest.fn();
