@@ -1,0 +1,29 @@
+.statistics-title {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.statistic-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.statistic-label {
+    font-weight: bold;
+}
+
+.statistic-value {
+    font-family: monospace;
+}

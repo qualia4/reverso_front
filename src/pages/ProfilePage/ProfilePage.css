@@ -51,10 +51,10 @@
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  width: 90%; /* Optional: set a max width */
-  max-width: 500px; /* Limit modal width for larger screens */
-  z-index: 1001; /* Above the modal background */
-  text-align: center; /* Center-align text inside the modal */
+  width: 90%;
+  max-width: 400px; /* Adjusted for a narrower display */
+  z-index: 1001;
+  text-align: center;
 }
 
 .statistics-title {

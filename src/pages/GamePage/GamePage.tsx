@@ -62,7 +62,7 @@ const GamePage: React.FC = () => {
     }, 500);
     setIntervalId(id);
 
-    // Cleanup function to clear the interval when component unmounts
+    // Cleanup function to clear the interval when components unmounts
     return () => {
       clearInterval(id);
     };
