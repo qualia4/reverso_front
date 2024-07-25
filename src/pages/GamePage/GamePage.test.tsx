@@ -126,6 +126,63 @@ describe("GamePage", () => {
         expect(makeMoveService).not.toHaveBeenCalled();
     });
 
+    it("should handle move when it's the current player's turn", async () => {
+        const initialGameState = {
+            points: { testuser: 0, opponent: 0 },
+            field: [
+                ["-", "*", "-"],
+                ["-", "-", "-"],
+                ["-", "-", "-"],
+            ],
+            currentPlayerName: "testuser",
+            gameEnded: false,
+        };
+
+        const updatedGameState = {
+            points: { testuser: 1, opponent: 0 },
+            field: [
+                ["-", "testuser", "-"],
+                ["-", "-", "-"],
+                ["-", "-", "-"],
+            ],
+            currentPlayerName: "opponent",
+            gameEnded: false,
+        };
+
+        (getGameInfo as jest.Mock)
+            .mockResolvedValueOnce(initialGameState)
+            .mockResolvedValueOnce(updatedGameState);
+
+        (getChatService as jest.Mock).mockResolvedValue([]);
+        (makeMoveService as jest.Mock).mockResolvedValue({});
+
+        render(
+            <MemoryRouter>
+                <GamePage />
+            </MemoryRouter>
+        );
+
+        await waitFor(() => {
+            expect(screen.getByText("Score:")).toBeInTheDocument();
+        });
+
+        // Wait for the game state to be updated
+        await waitFor(() => {
+            expect(screen.getByText("Your turn")).toBeInTheDocument();
+        });
+
+        // Find the playable cell and click it
+        const playableCell = screen.getByTestId('cell-0-1');
+        fireEvent.click(playableCell);
+
+        await waitFor(() => {
+            expect(makeMoveService).toHaveBeenCalledWith("testuser", 0, 1);
+            expect(getGameInfo).toHaveBeenCalledTimes(2);
+        });
+
+        expect(await screen.findByText("opponent's turn")).toBeInTheDocument();
+    });
+
 
     it("should clear interval on unmount", async () => {
         const clearIntervalSpy = jest.spyOn(global, "clearInterval");

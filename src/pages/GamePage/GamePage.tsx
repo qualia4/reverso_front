@@ -117,19 +117,20 @@ const GamePage: React.FC = () => {
       }
     } else if (cell !== "-" && cell !== "*") {
       cellClass +=
-        cell === firstPlayer
-          ? " game-cell-first-player"
-          : " game-cell-second-player";
+          cell === firstPlayer
+              ? " game-cell-first-player"
+              : " game-cell-second-player";
     }
 
     return (
-      <button
-        key={`${x}-${y}`}
-        className={cellClass}
-        onClick={() => cell === "*" && handleMove(x, y)}
-      >
-        {" "}
-      </button>
+        <button
+            key={`${x}-${y}`}
+            className={cellClass}
+            onClick={() => cell === "*" && handleMove(x, y)}
+            data-testid={`cell-${y}-${x}`}  // Add this line
+        >
+          {" "}
+        </button>
     );
   };
 
@@ -168,7 +169,7 @@ const GamePage: React.FC = () => {
   };
 
   return (
-    <div className="game-container">
+    <div className="game-container" data-testid="game-page">
       <div className="game-stats">
         <h3>Score:</h3>
         <div className="score-container">
