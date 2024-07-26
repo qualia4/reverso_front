@@ -1,4 +1,3 @@
-// src/pages/LoginPage/LoginPage.tsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMyContext } from '../../MyContext';
