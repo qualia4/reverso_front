@@ -1,4 +1,5 @@
 import React from 'react';
+import "./GameBoard.css"
 
 interface GameState {
     points: Record<string, number>;
@@ -13,7 +14,7 @@ interface GameBoardProps {
     currentUser: string | undefined;
 }
 
-const GameBoard: React.FC<GameBoardProps> = ({ gameState, onMove, currentUser }) => {
+export const GameBoard: React.FC<GameBoardProps> = ({ gameState, onMove, currentUser }) => {
     const renderCell = (cell: string, x: number, y: number) => {
         const playerKeys = gameState && Object.keys(gameState.points);
         const firstPlayer = playerKeys && playerKeys[0];

@@ -1,4 +1,5 @@
 import React from 'react';
+import "./ChatSection.css"
 
 interface GameState {
     points: Record<string, number>;
@@ -21,7 +22,7 @@ interface ChatSectionProps {
     gameState: GameState | null;
 }
 
-const ChatSection: React.FC<ChatSectionProps> = ({ chat, message, setMessage, onSendMessage, gameState }) => {
+export const ChatSection: React.FC<ChatSectionProps> = ({ chat, message, setMessage, onSendMessage, gameState }) => {
     return (
         <div className="chat-section">
             <h3 className="chat-title">Chat</h3>

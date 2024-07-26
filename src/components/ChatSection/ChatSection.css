@@ -1,0 +1,45 @@
+.chat-section {
+    margin-top: 10px;
+    width: 400px;
+}
+
+.chat-section .chat-controls {
+    display: flex;
+    align-items: center;
+}
+
+.chat-section .chat-input {
+    flex-grow: 1;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 12px;
+    margin: 10px 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.chat-button {
+    flex-shrink: 0;
+    width: 20%;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: #5c67f2;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+    max-width: 150px;
+    height: 100%;
+}
+
+.chat-button:hover {
+    background-color: #4a54e1;
+}
+
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+}

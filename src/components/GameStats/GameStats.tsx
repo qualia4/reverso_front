@@ -1,4 +1,5 @@
 import React from 'react';
+import "./GameStats.css"
 
 interface GameState {
     points: Record<string, number>;
@@ -12,7 +13,7 @@ interface GameStatsProps {
     currentUser: string | undefined;
 }
 
-const GameStats: React.FC<GameStatsProps> = ({ gameState, currentUser }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ gameState, currentUser }) => {
     return (
         <div className="game-stats">
             <h3>Score:</h3>
