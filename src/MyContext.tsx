@@ -5,7 +5,7 @@ interface MyContextProps {
   updateJsonData: (newJsonData: Record<string, string>) => void;
 }
 
-const MyContext = createContext<MyContextProps | undefined>(undefined);
+export const MyContext = createContext<MyContextProps | undefined>(undefined);
 
 interface MyProviderProps {
   children: React.ReactNode;

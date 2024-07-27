@@ -1,8 +1,8 @@
 import {Addresses} from "../../src/api/Addresses";
 
-describe('template spec', () => {
+describe('login page tests', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080'); // Assuming your login page is the root route
+    cy.visit('http://localhost:8080');
   });
 
   it('displays the login form', () => {
