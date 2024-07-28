@@ -1,0 +1,41 @@
+.game-board {
+}
+
+.game-cell {
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 50%;
+    background-color: lightgray;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition:
+            background-color 0.3s,
+            transform 0.3s;
+}
+
+.game-cell:hover {
+    transform: scale(1.1);
+}
+
+.game-cell-playable {
+    border-color: grey;
+}
+
+.first-player-border {
+    border-color: #3498db;
+}
+
+.second-player-border {
+    border-color: #e74c3c;
+}
+
+.game-cell-first-player {
+    background-color: #3498db;
+    color: white;
+}
+
+.game-cell-second-player {
+    background-color: #e74c3c;
+    color: white;
+}

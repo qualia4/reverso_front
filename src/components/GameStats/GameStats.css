@@ -1,0 +1,23 @@
+.game-stats {
+    text-align: center;
+    max-width: 300px;
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-box {
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
